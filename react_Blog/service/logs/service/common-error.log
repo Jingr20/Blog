@@ -1,0 +1,788 @@
+2022-02-12 17:29:14,883 ERROR 45110 nodejs.ClusterClientNoResponseError: client no response in 1375350ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 45110
+hostname: jingrandeMacBook-Air.local
+
+2022-02-13 09:07:40,056 ERROR 89139 [-/127.0.0.1/-/18ms GET /default/getArticleById/] nodejs.ER_PARSE_ERRORError: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'article.id=undefined' at line 1
+    at Query.Sequence._packetToError (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/sequences/Query.js:79:18)
+    at Protocol._parsePacket (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/Connection.js:88:28)
+    at Socket.<anonymous> (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/Connection.js:526:10)
+    at Socket.emit (events.js:375:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    --------------------
+    at Pool.query (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/Pool.js:199:23)
+    at /Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as query] (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at RDSClient.proto._query (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/lib/client.js:38:20)
+    at RDSClient.proto.query (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/lib/operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/co/index.js:65:19)
+    at /Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/co/index.js:54:5
+    sql: SELECT article.id as id,article.title as title,article.introduce as introduce,article.article_content as article_content,FROM_UNIXTIME(article.addTime,'%Y-%m-%d %H:%i:%s' ) as addTime,article.view_count as view_count ,type.typeName as typeName ,type.id as typeId FROM article LEFT JOIN type ON article.type_id = type.IdWHERE article.id=undefined
+code: "ER_PARSE_ERROR"
+errno: 1064
+sqlMessage: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'article.id=undefined' at line 1"
+sqlState: "42000"
+index: 0
+sql: "SELECT article.id as id,article.title as title,article.introduce as introduce,article.article_content as article_content,FROM_UNIXTIME(article.addTime,'%Y-%m-%d %H:%i:%s' ) as addTime,article.view_count as view_count ,type.typeName as typeName ,type.id as typeId FROM article LEFT JOIN type ON article.type_id = type.IdWHERE article.id=undefined"
+name: "ER_PARSE_ERRORError"
+pid: 89139
+hostname: jingrandeMacBook-Air.local
+
+2022-02-13 09:08:21,550 ERROR 89139 [-/127.0.0.1/-/2ms GET /default/getArticleById?id=1] nodejs.ER_PARSE_ERRORError: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'article.id=undefined' at line 1
+    at Query.Sequence._packetToError (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/sequences/Query.js:79:18)
+    at Protocol._parsePacket (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/Connection.js:88:28)
+    at Socket.<anonymous> (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/Connection.js:526:10)
+    at Socket.emit (events.js:375:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    --------------------
+    at Pool.query (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/Pool.js:199:23)
+    at /Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as query] (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at RDSClient.proto._query (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/lib/client.js:38:20)
+    at RDSClient.proto.query (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/lib/operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/co/index.js:65:19)
+    at /Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/co/index.js:54:5
+    sql: SELECT article.id as id,article.title as title,article.introduce as introduce,article.article_content as article_content,FROM_UNIXTIME(article.addTime,'%Y-%m-%d %H:%i:%s' ) as addTime,article.view_count as view_count ,type.typeName as typeName ,type.id as typeId FROM article LEFT JOIN type ON article.type_id = type.IdWHERE article.id=undefined
+code: "ER_PARSE_ERROR"
+errno: 1064
+sqlMessage: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'article.id=undefined' at line 1"
+sqlState: "42000"
+index: 0
+sql: "SELECT article.id as id,article.title as title,article.introduce as introduce,article.article_content as article_content,FROM_UNIXTIME(article.addTime,'%Y-%m-%d %H:%i:%s' ) as addTime,article.view_count as view_count ,type.typeName as typeName ,type.id as typeId FROM article LEFT JOIN type ON article.type_id = type.IdWHERE article.id=undefined"
+name: "ER_PARSE_ERRORError"
+pid: 89139
+hostname: jingrandeMacBook-Air.local
+
+2022-02-13 09:08:26,209 ERROR 89139 [-/127.0.0.1/-/3ms GET /default/getArticleById?id=1] nodejs.ER_PARSE_ERRORError: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'article.id=undefined' at line 1
+    at Query.Sequence._packetToError (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/sequences/Query.js:79:18)
+    at Protocol._parsePacket (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/Connection.js:88:28)
+    at Socket.<anonymous> (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/Connection.js:526:10)
+    at Socket.emit (events.js:375:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    --------------------
+    at Pool.query (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/Pool.js:199:23)
+    at /Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as query] (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at RDSClient.proto._query (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/lib/client.js:38:20)
+    at RDSClient.proto.query (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/lib/operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/co/index.js:65:19)
+    at /Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/co/index.js:54:5
+    sql: SELECT article.id as id,article.title as title,article.introduce as introduce,article.article_content as article_content,FROM_UNIXTIME(article.addTime,'%Y-%m-%d %H:%i:%s' ) as addTime,article.view_count as view_count ,type.typeName as typeName ,type.id as typeId FROM article LEFT JOIN type ON article.type_id = type.IdWHERE article.id=undefined
+code: "ER_PARSE_ERROR"
+errno: 1064
+sqlMessage: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'article.id=undefined' at line 1"
+sqlState: "42000"
+index: 0
+sql: "SELECT article.id as id,article.title as title,article.introduce as introduce,article.article_content as article_content,FROM_UNIXTIME(article.addTime,'%Y-%m-%d %H:%i:%s' ) as addTime,article.view_count as view_count ,type.typeName as typeName ,type.id as typeId FROM article LEFT JOIN type ON article.type_id = type.IdWHERE article.id=undefined"
+name: "ER_PARSE_ERRORError"
+pid: 89139
+hostname: jingrandeMacBook-Air.local
+
+2022-02-13 09:09:03,496 ERROR 93376 [-/127.0.0.1/-/18ms GET /default/getArticleById?id=1] nodejs.ER_BAD_FIELD_ERRORError: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+    at Query.Sequence._packetToError (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/sequences/Query.js:79:18)
+    at Protocol._parsePacket (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/Connection.js:88:28)
+    at Socket.<anonymous> (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/Connection.js:526:10)
+    at Socket.emit (events.js:375:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    --------------------
+    at Pool.query (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/Pool.js:199:23)
+    at /Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as query] (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at RDSClient.proto._query (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/lib/client.js:38:20)
+    at RDSClient.proto.query (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/lib/operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/co/index.js:65:19)
+    at /Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/co/index.js:54:5
+    sql: SELECT article.id as id,article.title as title,article.introduce as introduce,article.article_content as article_content,FROM_UNIXTIME(article.addTime,'%Y-%m-%d %H:%i:%s' ) as addTime,article.view_count as view_count ,type.typeName as typeName ,type.id as typeId FROM article LEFT JOIN type ON article.type_id = type.Id WHERE article.id=undefined
+code: "ER_BAD_FIELD_ERROR"
+errno: 1054
+sqlMessage: "Unknown column 'undefined' in 'where clause'"
+sqlState: "42S22"
+index: 0
+sql: "SELECT article.id as id,article.title as title,article.introduce as introduce,article.article_content as article_content,FROM_UNIXTIME(article.addTime,'%Y-%m-%d %H:%i:%s' ) as addTime,article.view_count as view_count ,type.typeName as typeName ,type.id as typeId FROM article LEFT JOIN type ON article.type_id = type.Id WHERE article.id=undefined"
+name: "ER_BAD_FIELD_ERRORError"
+pid: 93376
+hostname: jingrandeMacBook-Air.local
+
+2022-02-13 09:09:07,395 ERROR 93376 [-/127.0.0.1/-/2ms GET /default/getArticleById] nodejs.ER_BAD_FIELD_ERRORError: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+    at Query.Sequence._packetToError (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/sequences/Query.js:79:18)
+    at Protocol._parsePacket (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/Connection.js:88:28)
+    at Socket.<anonymous> (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/Connection.js:526:10)
+    at Socket.emit (events.js:375:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    --------------------
+    at Pool.query (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/Pool.js:199:23)
+    at /Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as query] (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at RDSClient.proto._query (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/lib/client.js:38:20)
+    at RDSClient.proto.query (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/lib/operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/co/index.js:65:19)
+    at /Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/co/index.js:54:5
+    sql: SELECT article.id as id,article.title as title,article.introduce as introduce,article.article_content as article_content,FROM_UNIXTIME(article.addTime,'%Y-%m-%d %H:%i:%s' ) as addTime,article.view_count as view_count ,type.typeName as typeName ,type.id as typeId FROM article LEFT JOIN type ON article.type_id = type.Id WHERE article.id=undefined
+code: "ER_BAD_FIELD_ERROR"
+errno: 1054
+sqlMessage: "Unknown column 'undefined' in 'where clause'"
+sqlState: "42S22"
+index: 0
+sql: "SELECT article.id as id,article.title as title,article.introduce as introduce,article.article_content as article_content,FROM_UNIXTIME(article.addTime,'%Y-%m-%d %H:%i:%s' ) as addTime,article.view_count as view_count ,type.typeName as typeName ,type.id as typeId FROM article LEFT JOIN type ON article.type_id = type.Id WHERE article.id=undefined"
+name: "ER_BAD_FIELD_ERRORError"
+pid: 93376
+hostname: jingrandeMacBook-Air.local
+
+2022-02-13 09:13:35,582 ERROR 95581 [-/127.0.0.1/-/6ms GET /default/getArticleById] nodejs.ER_BAD_FIELD_ERRORError: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+    at Query.Sequence._packetToError (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/sequences/Query.js:79:18)
+    at Protocol._parsePacket (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/Connection.js:88:28)
+    at Socket.<anonymous> (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/Connection.js:526:10)
+    at Socket.emit (events.js:375:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    --------------------
+    at Pool.query (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/Pool.js:199:23)
+    at /Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as query] (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at RDSClient.proto._query (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/lib/client.js:38:20)
+    at RDSClient.proto.query (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/lib/operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/co/index.js:65:19)
+    at /Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/co/index.js:54:5
+    sql: SELECT article.id as id,article.title as title,article.introduce as introduce,article.article_content as article_content,FROM_UNIXTIME(article.addTime,'%Y-%m-%d %H:%i:%s' ) as addTime,article.view_count as view_count ,type.typeName as typeName ,type.id as typeId FROM article LEFT JOIN type ON article.type_id = type.Id WHERE article.id=undefined
+code: "ER_BAD_FIELD_ERROR"
+errno: 1054
+sqlMessage: "Unknown column 'undefined' in 'where clause'"
+sqlState: "42S22"
+index: 0
+sql: "SELECT article.id as id,article.title as title,article.introduce as introduce,article.article_content as article_content,FROM_UNIXTIME(article.addTime,'%Y-%m-%d %H:%i:%s' ) as addTime,article.view_count as view_count ,type.typeName as typeName ,type.id as typeId FROM article LEFT JOIN type ON article.type_id = type.Id WHERE article.id=undefined"
+name: "ER_BAD_FIELD_ERRORError"
+pid: 95581
+hostname: jingrandeMacBook-Air.local
+
+2022-02-13 09:13:46,564 ERROR 95581 [-/127.0.0.1/-/2ms GET /default/getArticleById?id=1] nodejs.ER_BAD_FIELD_ERRORError: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+    at Query.Sequence._packetToError (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/sequences/Query.js:79:18)
+    at Protocol._parsePacket (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/Connection.js:88:28)
+    at Socket.<anonymous> (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/Connection.js:526:10)
+    at Socket.emit (events.js:375:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    --------------------
+    at Pool.query (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/Pool.js:199:23)
+    at /Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as query] (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at RDSClient.proto._query (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/lib/client.js:38:20)
+    at RDSClient.proto.query (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/lib/operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/co/index.js:65:19)
+    at /Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/co/index.js:54:5
+    sql: SELECT article.id as id,article.title as title,article.introduce as introduce,article.article_content as article_content,FROM_UNIXTIME(article.addTime,'%Y-%m-%d %H:%i:%s' ) as addTime,article.view_count as view_count ,type.typeName as typeName ,type.id as typeId FROM article LEFT JOIN type ON article.type_id = type.Id WHERE article.id=undefined
+code: "ER_BAD_FIELD_ERROR"
+errno: 1054
+sqlMessage: "Unknown column 'undefined' in 'where clause'"
+sqlState: "42S22"
+index: 0
+sql: "SELECT article.id as id,article.title as title,article.introduce as introduce,article.article_content as article_content,FROM_UNIXTIME(article.addTime,'%Y-%m-%d %H:%i:%s' ) as addTime,article.view_count as view_count ,type.typeName as typeName ,type.id as typeId FROM article LEFT JOIN type ON article.type_id = type.Id WHERE article.id=undefined"
+name: "ER_BAD_FIELD_ERRORError"
+pid: 95581
+hostname: jingrandeMacBook-Air.local
+
+2022-02-13 09:57:50,402 ERROR 95570 nodejs.ClusterClientNoResponseError: client no response in 586329ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 95570
+hostname: jingrandeMacBook-Air.local
+
+2022-02-13 10:00:21,606 ERROR 6761 [-/127.0.0.1/-/8ms GET /default/getArticleById/undefined] nodejs.ER_BAD_FIELD_ERRORError: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+    at Query.Sequence._packetToError (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/sequences/Query.js:79:18)
+    at Protocol._parsePacket (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/Connection.js:88:28)
+    at Socket.<anonymous> (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/Connection.js:526:10)
+    at Socket.emit (events.js:375:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    --------------------
+    at Pool.query (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/Pool.js:199:23)
+    at /Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as query] (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at RDSClient.proto._query (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/lib/client.js:38:20)
+    at RDSClient.proto.query (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/lib/operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/co/index.js:65:19)
+    at /Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/co/index.js:54:5
+    sql: SELECT article.id as id,article.title as title,article.introduce as introduce,article.article_content as article_content,FROM_UNIXTIME(article.addTime,'%Y-%m-%d %H:%i:%s' ) as addTime,article.view_count as view_count ,type.typeName as typeName ,type.id as typeId FROM article LEFT JOIN type ON article.type_id = type.Id WHERE article.id=undefined
+code: "ER_BAD_FIELD_ERROR"
+errno: 1054
+sqlMessage: "Unknown column 'undefined' in 'where clause'"
+sqlState: "42S22"
+index: 0
+sql: "SELECT article.id as id,article.title as title,article.introduce as introduce,article.article_content as article_content,FROM_UNIXTIME(article.addTime,'%Y-%m-%d %H:%i:%s' ) as addTime,article.view_count as view_count ,type.typeName as typeName ,type.id as typeId FROM article LEFT JOIN type ON article.type_id = type.Id WHERE article.id=undefined"
+name: "ER_BAD_FIELD_ERRORError"
+pid: 6761
+hostname: jingrandeMacBook-Air.local
+
+2022-02-13 10:00:22,706 ERROR 6761 [-/127.0.0.1/-/3ms GET /default/getArticleById/undefined] nodejs.ER_BAD_FIELD_ERRORError: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+    at Query.Sequence._packetToError (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/sequences/Query.js:79:18)
+    at Protocol._parsePacket (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/Connection.js:88:28)
+    at Socket.<anonymous> (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/Connection.js:526:10)
+    at Socket.emit (events.js:375:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    --------------------
+    at Pool.query (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/Pool.js:199:23)
+    at /Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as query] (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at RDSClient.proto._query (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/lib/client.js:38:20)
+    at RDSClient.proto.query (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/lib/operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/co/index.js:65:19)
+    at /Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/co/index.js:54:5
+    sql: SELECT article.id as id,article.title as title,article.introduce as introduce,article.article_content as article_content,FROM_UNIXTIME(article.addTime,'%Y-%m-%d %H:%i:%s' ) as addTime,article.view_count as view_count ,type.typeName as typeName ,type.id as typeId FROM article LEFT JOIN type ON article.type_id = type.Id WHERE article.id=undefined
+code: "ER_BAD_FIELD_ERROR"
+errno: 1054
+sqlMessage: "Unknown column 'undefined' in 'where clause'"
+sqlState: "42S22"
+index: 0
+sql: "SELECT article.id as id,article.title as title,article.introduce as introduce,article.article_content as article_content,FROM_UNIXTIME(article.addTime,'%Y-%m-%d %H:%i:%s' ) as addTime,article.view_count as view_count ,type.typeName as typeName ,type.id as typeId FROM article LEFT JOIN type ON article.type_id = type.Id WHERE article.id=undefined"
+name: "ER_BAD_FIELD_ERRORError"
+pid: 6761
+hostname: jingrandeMacBook-Air.local
+
+2022-02-13 10:00:26,263 ERROR 6761 [-/127.0.0.1/-/2ms GET /default/getArticleById/undefined] nodejs.ER_BAD_FIELD_ERRORError: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+    at Query.Sequence._packetToError (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/sequences/Query.js:79:18)
+    at Protocol._parsePacket (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/Connection.js:88:28)
+    at Socket.<anonymous> (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/Connection.js:526:10)
+    at Socket.emit (events.js:375:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    --------------------
+    at Pool.query (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/Pool.js:199:23)
+    at /Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as query] (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at RDSClient.proto._query (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/lib/client.js:38:20)
+    at RDSClient.proto.query (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/lib/operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/co/index.js:65:19)
+    at /Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/co/index.js:54:5
+    sql: SELECT article.id as id,article.title as title,article.introduce as introduce,article.article_content as article_content,FROM_UNIXTIME(article.addTime,'%Y-%m-%d %H:%i:%s' ) as addTime,article.view_count as view_count ,type.typeName as typeName ,type.id as typeId FROM article LEFT JOIN type ON article.type_id = type.Id WHERE article.id=undefined
+code: "ER_BAD_FIELD_ERROR"
+errno: 1054
+sqlMessage: "Unknown column 'undefined' in 'where clause'"
+sqlState: "42S22"
+index: 0
+sql: "SELECT article.id as id,article.title as title,article.introduce as introduce,article.article_content as article_content,FROM_UNIXTIME(article.addTime,'%Y-%m-%d %H:%i:%s' ) as addTime,article.view_count as view_count ,type.typeName as typeName ,type.id as typeId FROM article LEFT JOIN type ON article.type_id = type.Id WHERE article.id=undefined"
+name: "ER_BAD_FIELD_ERRORError"
+pid: 6761
+hostname: jingrandeMacBook-Air.local
+
+2022-02-13 10:03:34,465 ERROR 6761 [-/127.0.0.1/-/5ms GET /default/getArticleById/undefined] nodejs.ER_BAD_FIELD_ERRORError: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+    at Query.Sequence._packetToError (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/sequences/Query.js:79:18)
+    at Protocol._parsePacket (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/Connection.js:88:28)
+    at Socket.<anonymous> (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/Connection.js:526:10)
+    at Socket.emit (events.js:375:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    --------------------
+    at Pool.query (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/Pool.js:199:23)
+    at /Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as query] (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at RDSClient.proto._query (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/lib/client.js:38:20)
+    at RDSClient.proto.query (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/lib/operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/co/index.js:65:19)
+    at /Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/co/index.js:54:5
+    sql: SELECT article.id as id,article.title as title,article.introduce as introduce,article.article_content as article_content,FROM_UNIXTIME(article.addTime,'%Y-%m-%d %H:%i:%s' ) as addTime,article.view_count as view_count ,type.typeName as typeName ,type.id as typeId FROM article LEFT JOIN type ON article.type_id = type.Id WHERE article.id=undefined
+code: "ER_BAD_FIELD_ERROR"
+errno: 1054
+sqlMessage: "Unknown column 'undefined' in 'where clause'"
+sqlState: "42S22"
+index: 0
+sql: "SELECT article.id as id,article.title as title,article.introduce as introduce,article.article_content as article_content,FROM_UNIXTIME(article.addTime,'%Y-%m-%d %H:%i:%s' ) as addTime,article.view_count as view_count ,type.typeName as typeName ,type.id as typeId FROM article LEFT JOIN type ON article.type_id = type.Id WHERE article.id=undefined"
+name: "ER_BAD_FIELD_ERRORError"
+pid: 6761
+hostname: jingrandeMacBook-Air.local
+
+2022-02-13 10:07:37,064 ERROR 95570 nodejs.ClusterClientNoResponseError: client no response in 226581ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 95570
+hostname: jingrandeMacBook-Air.local
+
+2022-02-13 10:46:17,921 ERROR 28347 nodejs.ClusterClientNoResponseError: client no response in 293463ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 28347
+hostname: jingrandeMacBook-Air.local
+
+2022-02-13 12:20:33,310 ERROR 28347 nodejs.ClusterClientNoResponseError: client no response in 5655360ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 28347
+hostname: jingrandeMacBook-Air.local
+
+2022-02-13 12:59:01,600 ERROR 43077 nodejs.ClusterClientNoResponseError: client no response in 437539ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 43077
+hostname: jingrandeMacBook-Air.local
+
+2022-02-13 14:21:07,409 ERROR 43077 nodejs.ClusterClientNoResponseError: client no response in 3685580ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 43077
+hostname: jingrandeMacBook-Air.local
+
+2022-02-13 14:25:01,474 ERROR 43077 nodejs.ClusterClientNoResponseError: client no response in 213859ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 43077
+hostname: jingrandeMacBook-Air.local
+
+2022-02-13 16:18:26,115 ERROR 1722 nodejs.ClusterClientNoResponseError: client no response in 93654ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 1722
+hostname: jingrandeMacBook-Air.local
+
+2022-02-13 18:47:56,833 ERROR 36577 [-/127.0.0.1/-/33ms GET /default/getArticleListByTypeId/undefined] nodejs.ER_BAD_FIELD_ERRORError: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+    at Query.Sequence._packetToError (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/sequences/Query.js:79:18)
+    at Protocol._parsePacket (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/Connection.js:88:28)
+    at Socket.<anonymous> (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/Connection.js:526:10)
+    at Socket.emit (events.js:375:28)
+    at addChunk (internal/streams/readable.js:290:12)
+    --------------------
+    at Pool.query (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/Pool.js:199:23)
+    at /Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as query] (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at RDSClient.proto._query (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/lib/client.js:38:20)
+    at RDSClient.proto.query (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/lib/operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/co/index.js:65:19)
+    at /Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/co/index.js:54:5
+    sql: SELECT article.id as id,article.title as title,article.introduce as introduce,article.article_content as article_content,FROM_UNIXTIME(article.addTime,'%Y-%m-%d %H:%i:%s' ) as addTime,article.view_count as view_count ,type.typeName as typeName ,type.id as typeId FROM article LEFT JOIN type ON article.type_id = type.Id WHERE type.id=undefined
+code: "ER_BAD_FIELD_ERROR"
+errno: 1054
+sqlMessage: "Unknown column 'undefined' in 'where clause'"
+sqlState: "42S22"
+index: 0
+sql: "SELECT article.id as id,article.title as title,article.introduce as introduce,article.article_content as article_content,FROM_UNIXTIME(article.addTime,'%Y-%m-%d %H:%i:%s' ) as addTime,article.view_count as view_count ,type.typeName as typeName ,type.id as typeId FROM article LEFT JOIN type ON article.type_id = type.Id WHERE type.id=undefined"
+name: "ER_BAD_FIELD_ERRORError"
+pid: 36577
+hostname: jingrandeMacBook-Air.local
+
+2022-02-17 17:35:05,494 ERROR 58344 nodejs.ClusterClientNoResponseError: client no response in 1707809ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 58344
+hostname: jingrandeMacBook-Air.local
+
+2022-02-17 20:54:08,920 ERROR 58344 nodejs.ClusterClientNoResponseError: client no response in 101474ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 58344
+hostname: jingrandeMacBook-Air.local
+
+2022-02-18 13:54:54,296 ERROR 61936 nodejs.ClusterClientNoResponseError: client no response in 1025863ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 61936
+hostname: jingrandeMacBook-Air.local
+
+2022-02-18 17:26:16,043 ERROR 45277 nodejs.ClusterClientNoResponseError: client no response in 523633ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 45277
+hostname: jingrandeMacBook-Air.local
+
+2022-02-18 17:38:37,656 ERROR 45277 nodejs.ClusterClientNoResponseError: client no response in 621544ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 45277
+hostname: jingrandeMacBook-Air.local
+
+2022-02-18 17:58:20,575 ERROR 45277 nodejs.ClusterClientNoResponseError: client no response in 402162ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 45277
+hostname: jingrandeMacBook-Air.local
+
+2022-02-18 18:43:16,472 ERROR 45277 nodejs.ClusterClientNoResponseError: client no response in 2015703ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 45277
+hostname: jingrandeMacBook-Air.local
+
+2022-02-18 18:49:32,981 ERROR 45277 nodejs.ClusterClientNoResponseError: client no response in 335514ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 45277
+hostname: jingrandeMacBook-Air.local
+
+2022-03-09 18:52:25,242 ERROR 69148 nodejs.ClusterClientNoResponseError: client no response in 110027ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 69148
+hostname: jingrandeMacBook-Air.local
+
+2022-03-09 19:19:15,261 ERROR 69148 nodejs.ClusterClientNoResponseError: client no response in 989865ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 69148
+hostname: jingrandeMacBook-Air.local
+
+2022-04-12 15:13:25,246 ERROR 79351 nodejs.ClusterClientNoResponseError: client no response in 584405ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 79351
+hostname: jingrandeMacBook-Air.local
+
+2022-04-12 17:50:49,204 ERROR 79351 nodejs.ClusterClientNoResponseError: client no response in 81607ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 79351
+hostname: jingrandeMacBook-Air.local
+
+2022-04-13 13:53:11,075 ERROR 68375 nodejs.ClusterClientNoResponseError: client no response in 4610468ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 68375
+hostname: jingrandeMacBook-Air.local
+
+2022-04-13 14:41:00,930 ERROR 68375 nodejs.ClusterClientNoResponseError: client no response in 548801ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 68375
+hostname: jingrandeMacBook-Air.local
+
+2022-04-13 14:51:13,886 ERROR 68375 nodejs.ClusterClientNoResponseError: client no response in 112226ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 68375
+hostname: jingrandeMacBook-Air.local
+
+2022-04-13 15:03:08,356 ERROR 68375 nodejs.ClusterClientNoResponseError: client no response in 554380ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 68375
+hostname: jingrandeMacBook-Air.local
+
+2022-04-13 15:19:52,599 ERROR 68375 nodejs.ClusterClientNoResponseError: client no response in 784185ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 68375
+hostname: jingrandeMacBook-Air.local
+
+2022-04-13 16:30:33,624 ERROR 68375 nodejs.ClusterClientNoResponseError: client no response in 179717ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 68375
+hostname: jingrandeMacBook-Air.local
+
+2022-04-13 17:09:47,647 ERROR 68375 nodejs.ClusterClientNoResponseError: client no response in 273089ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 68375
+hostname: jingrandeMacBook-Air.local
+
+2022-04-13 18:10:34,697 ERROR 68375 nodejs.ClusterClientNoResponseError: client no response in 2066129ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 68375
+hostname: jingrandeMacBook-Air.local
+
+2022-04-13 18:34:35,926 ERROR 68375 nodejs.ClusterClientNoResponseError: client no response in 1400520ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 68375
+hostname: jingrandeMacBook-Air.local
+
+2022-04-13 18:38:14,758 ERROR 68375 nodejs.ClusterClientNoResponseError: client no response in 218089ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 68375
+hostname: jingrandeMacBook-Air.local
+
+2022-04-14 13:38:59,411 ERROR 66298 [-/127.0.0.1/-/1ms GET /] nodejs.ECONNREFUSEDError: connect ECONNREFUSED 127.0.0.1:8889
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1148:16)
+    --------------------
+    at Protocol._enqueue (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Protocol.handshake (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Protocol.js:51:23)
+    at PoolConnection.connect (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/Connection.js:116:18)
+    at Pool.getConnection (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/Pool.js:48:16)
+    at /Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as getConnection] (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at Pool.query (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/Pool.js:202:8)
+    at /Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    sql: select now() as currentTime;
+errno: -61
+code: "ECONNREFUSED"
+syscall: "connect"
+address: "127.0.0.1"
+port: 8889
+fatal: true
+name: "ECONNREFUSEDError"
+pid: 66298
+hostname: jingrandeMacBook-Air.local
+
+2022-04-14 13:40:37,642 ERROR 67173 [-/127.0.0.1/-/0ms GET /] nodejs.ECONNREFUSEDError: connect ECONNREFUSED 127.0.0.1:8889
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1148:16)
+    --------------------
+    at Protocol._enqueue (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Protocol.handshake (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Protocol.js:51:23)
+    at PoolConnection.connect (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/Connection.js:116:18)
+    at Pool.getConnection (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/Pool.js:48:16)
+    at /Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as getConnection] (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at Pool.query (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/Pool.js:202:8)
+    at /Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    sql: select now() as currentTime;
+errno: -61
+code: "ECONNREFUSED"
+syscall: "connect"
+address: "127.0.0.1"
+port: 8889
+fatal: true
+name: "ECONNREFUSEDError"
+pid: 67173
+hostname: jingrandeMacBook-Air.local
+
+2022-04-14 13:53:09,292 ERROR 67675 nodejs.ClusterClientNoResponseError: client no response in 72202ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 67675
+hostname: jingrandeMacBook-Air.local
+
+2022-04-14 15:47:34,542 ERROR 67675 nodejs.ClusterClientNoResponseError: client no response in 4444126ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 67675
+hostname: jingrandeMacBook-Air.local
+
+2022-04-14 17:35:37,261 ERROR 67675 nodejs.ClusterClientNoResponseError: client no response in 6462160ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 67675
+hostname: jingrandeMacBook-Air.local
+
+2022-04-14 18:45:59,205 ERROR 67675 nodejs.ClusterClientNoResponseError: client no response in 4221254ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 67675
+hostname: jingrandeMacBook-Air.local
+
+2022-04-14 19:28:26,266 ERROR 67675 nodejs.ClusterClientNoResponseError: client no response in 1991251ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 67675
+hostname: jingrandeMacBook-Air.local
+
+2022-04-14 19:36:47,735 ERROR 67675 nodejs.ClusterClientNoResponseError: client no response in 301428ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 67675
+hostname: jingrandeMacBook-Air.local
+
+2022-04-14 19:40:58,550 ERROR 67675 nodejs.ClusterClientNoResponseError: client no response in 90104ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 67675
+hostname: jingrandeMacBook-Air.local
+
+2022-04-14 20:30:18,848 ERROR 67675 nodejs.ClusterClientNoResponseError: client no response in 139141ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 67675
+hostname: jingrandeMacBook-Air.local
+
+2022-04-14 20:46:47,625 ERROR 67675 nodejs.ClusterClientNoResponseError: client no response in 108019ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:557:17)
+    at processTimers (internal/timers.js:500:7)
+name: "ClusterClientNoResponseError"
+pid: 67675
+hostname: jingrandeMacBook-Air.local
+
+2022-05-02 14:35:46,764 ERROR 66538 [-/127.0.0.1/-/0ms GET /] nodejs.ECONNREFUSEDError: connect ECONNREFUSED 127.0.0.1:8889
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1148:16)
+    --------------------
+    at Protocol._enqueue (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Protocol.handshake (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/protocol/Protocol.js:51:23)
+    at PoolConnection.connect (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/Connection.js:116:18)
+    at Pool.getConnection (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/Pool.js:48:16)
+    at /Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at Pool.<anonymous> (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at Pool.ret [as getConnection] (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at Pool.query (/Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/mysql/lib/Pool.js:202:8)
+    at /Users/jr/myWeb/React项目实战_博客/react_Blog/service/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    sql: select now() as currentTime;
+errno: -61
+code: "ECONNREFUSED"
+syscall: "connect"
+address: "127.0.0.1"
+port: 8889
+fatal: true
+name: "ECONNREFUSEDError"
+pid: 66538
+hostname: jingrandeMacBook-Air.local
+

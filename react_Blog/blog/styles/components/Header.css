@@ -1,0 +1,27 @@
+.header{
+    background-color: #ffffff;
+    padding: .4rem;
+    height: 2.8rem;
+    border-bottom:1px solid #ccc;
+}
+
+.header .headerLogo{
+    color:#1e90ff;
+    font-size: 1.4rem;
+}
+
+.header .headerTxt{
+    font-size: 0.6rem;
+    color: #999;
+    padding-left: .6rem;
+}
+
+.header .ant-menu{
+    line-height: 2.3rem;
+}
+
+.header .ant-menu-title-content{
+    /* font-size:.7rem !important; */
+    padding-left:1rem;
+    padding-right:1rem;
+}
